@@ -216,7 +216,7 @@ export const Data = {
       {
         name: "프로젝트기반 웹&앱(자바,스프링,리액트,노코드) SW개발자 양성과정",
         company: "미금 그린아카데미 노코드 3기",
-        period: "2025년 2월 -  현재 진행중",
+        period: "2025년 2월 - 2025년 6월",
         description: [
           "JAVA , 스프링,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA , 파이선"
         ],

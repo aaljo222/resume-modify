@@ -8,7 +8,7 @@ html {
 
 @layer components {
   .container-max {
-    @apply w-full mx-auto px-6 lg:px-8;
+    @apply bg-white rounded-2xl shadow-lg p-6 lg:p-7 xl:p-8; /* ← 기본 shadow 사용 */
     @apply max-w-[1280px] lg:max-w-[1440px] xl:max-w-[1600px] 2xl:max-w-[1760px];
   }
 

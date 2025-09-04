@@ -5,3 +5,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer components {
+  .container-max {
+    @apply w-full mx-auto px-6 lg:px-8;
+    @apply max-w-[1280px] lg:max-w-[1440px] xl:max-w-[1600px] 2xl:max-w-[1760px];
+  }
+
+  .section-title {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft p-6 lg:p-7 xl:p-8;
+  }
+}

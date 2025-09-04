@@ -8,7 +8,6 @@ import { Works } from "../Components/Works";
 import { SocialMedia } from "../Components/SocialMedia";
 import { AboutMe } from "../Components/AboutMe";
 import { SEO } from "../Components/SEO";
-import SidebarMenu from "../Components/SidebarMenu";
 import { Data as dataSchema } from "../Schemas/Data";
 
 export const Resume = () => {
@@ -27,9 +26,31 @@ export const Resume = () => {
       <main className="mx-auto w-full max-w-[1600px] px-6 lg:px-8 pb-16 text-[15px] md:text-base lg:text-[17px]">
         {/* ✅ 12컬럼: 왼쪽 5, 오른쪽 7 (초대형에서는 6:6) */}
         <div className="grid grid-cols-12 gap-6 xl:gap-8 2xl:gap-10">
-          {/* LEFT: 사진 → Technology → Skills → Profile */}
+          {/* LEFT: Technology → Skills → Profile → Profile-Detail */}
           <div className="col-span-12 md:col-span-5 2xl:col-span-6 space-y-6">
-            {/* Profile(사진+소개+소셜) */}
+            {/* Technology */}
+            <section id="technology" className="card lg:p-8 scroll-mt-28">
+              <h2 className="section-title">Technology</h2>
+              <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
+                {skills.technicalSkills.map((t) => (
+                  <li key={t} className="tag">
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            {/* Skills */}
+            <section id="skills" className="card lg:p-8 scroll-mt-28">
+              <Skills
+                technicalLabel="Skills"
+                softLabel=""
+                technicalSkills={skills.softSkills}
+                softSkills={[]}
+              />
+            </section>
+
+            {/* ⬇️ Profile(사진+소개+소셜) — 아래로 이동 */}
             <section id="profile" className="card lg:p-8 scroll-mt-28">
               <div className="flex flex-col gap-6 md:flex-row">
                 <Profile {...profile} />
@@ -38,6 +59,12 @@ export const Resume = () => {
                   <SocialMedia {...socialMedia} />
                 </div>
               </div>
+            </section>
+
+            {/* Profile 상세(선택) */}
+            <section id="profile-more" className="card lg:p-8 scroll-mt-28">
+              <h2 className="section-title">Profile</h2>
+              <p className="mt-3 text-slate-700">{aboutMe.description[0]}</p>
             </section>
 
             {/* Technology */}
@@ -61,18 +88,10 @@ export const Resume = () => {
                 softSkills={[]}
               />
             </section>
-
-            {/* Profile 상세(원하면 유지/삭제) */}
-            <section id="profile-more" className="card lg:p-8 scroll-mt-28">
-              <h2 className="section-title">Profile</h2>
-              <p className="mt-3 text-slate-700">{aboutMe.description[0]}</p>
-            </section>
           </div>
 
           {/* RIGHT: 사이드 메뉴 + 교육/실무경력/교육경력 */}
           <div className="col-span-12 md:col-span-7 2xl:col-span-6 space-y-6 lg:border-s lg:ps-6">
-            <SidebarMenu />
-
             <section id="education" className="card lg:p-8 scroll-mt-28">
               <Academic {...experience} />
             </section>

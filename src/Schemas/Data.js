@@ -9,13 +9,13 @@ export const Data = {
     ocupation: "인공지능 , 빅데이터 전문가",
     location: "수원시 영통구 영통동 삼성로 320번길 62",
     email: "aaljo2@naver.com",
-    telephone: "010-7547-3869",
+    telephone: "010-7547-xxxx",
     image: "images/아내.PNG",
   },
   aboutMe: {
     label: "Profile",
     description: [
-      "실무 경력 23년, 교육 경력 6년 을 동시에 겸비한 전문 개발자 및 교육자",
+      "실무 경력 23년, 교육 경력 7년 을 동시에 겸비한 전문 개발자 및 교육자",
       "사랑하는 두딸,아내와 소소한 행복을 꿈꾸는 평범한 남편이자 아빠",
     ],
   },
@@ -61,7 +61,7 @@ export const Data = {
         className: "bxl-github",
       },
       {
-        label: "Maaato",
+        label: "구글",
         name: "twiiter",
         url: "https://twitter.com/I_Maaato",
         className: "bxl-twitter",

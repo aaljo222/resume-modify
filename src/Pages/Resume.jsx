@@ -28,7 +28,7 @@ export const Resume = () => {
         {/* ✅ 12컬럼: 왼쪽 8, 오른쪽 4 (md↑에서 2열 고정) */}
         <div className="grid grid-cols-12 gap-6">
           {/* LEFT: 사진 → Technology → Skills → Profile */}
-          <div className="col-span-12 md:col-span-8 space-y-6">
+          <div className="col-span-12 md:col-span-5 lg:col-span-5 space-y-6">
             {/* Profile(사진+소개+소셜) */}
             <section id="profile" className="card scroll-mt-24">
               <div className="flex flex-col gap-6 md:flex-row">
@@ -70,7 +70,7 @@ export const Resume = () => {
           </div>
 
           {/* RIGHT: 사이드 메뉴 + 교육/실무경력/교육경력 */}
-          <div className="col-span-12 md:col-span-4 space-y-6 lg:border-s lg:ps-6">
+          <div className="col-span-12 md:col-span-7 lg:col-span-7 space-y-6 lg:border-s lg:ps-6">
             <SidebarMenu />
 
             <section id="education" className="card scroll-mt-24">

@@ -1,5 +1,5 @@
+/** src/Components/Profile.jsx **/
 import React from "react";
-import { Options } from "./Options";
 
 export const Profile = ({
   name,
@@ -10,29 +10,36 @@ export const Profile = ({
   image,
 }) => {
   return (
-    <section className="home" id="home">
-      <div className="home__container section bd-grid">
-        <div className="home__data bd-grid">
-          <img src={image} alt="profile_image" className="home__img" />
-          <h1 className="home__title">
-            <strong>{name}</strong>
-          </h1>
-          <h3 className="home__profession">{ocupation}</h3>
-        </div>
-
-        <div className="home__address bd-grid">
-          <span className="home__information">
-            <i className="bx bx-map home__icon" /> {location}
-          </span>
-          <span className="home__information">
-            <i className="bx bx-envelope home__icon" /> {email}
-          </span>
-          <span className="home__information">
-            <i className="bx bx-phone home__icon" /> {telephone}
-          </span>
+    <div id="profile" className="flex items-center gap-6">
+      <img
+        src={image}
+        alt={name}
+        className="h-28 w-28 rounded-full object-cover ring-4 ring-white shadow-soft"
+      />
+      <div>
+        <h1 className="text-2xl font-semibold tracking-tight">{name}</h1>
+        <p className="mt-1 text-slate-600">{ocupation}</p>
+        <div className="mt-3 grid gap-1 text-sm text-slate-600">
+          <div className="flex items-center gap-2">
+            <i className="bx bx-map" />
+            {location}
+          </div>
+          <a
+            className="flex items-center gap-2 hover:text-primary-700"
+            href={`mailto:${email}`}
+          >
+            <i className="bx bx-envelope" />
+            {email}
+          </a>
+          <a
+            className="flex items-center gap-2 hover:text-primary-700"
+            href={`tel:${telephone}`}
+          >
+            <i className="bx bx-phone" />
+            {telephone}
+          </a>
         </div>
       </div>
-      <Options />
-    </section>
+    </div>
   );
 };

@@ -1,30 +1,19 @@
+/** src/Components/Academic.jsx **/
 import React from "react";
 
-export const Academic = ({ academic }) => {
-  return (
-    <section className="academic-experience section" id="education">
-      <h2 className="section-title">Educación</h2>
-      <div className="education__container bd-grid">
-        {academic.map((academy) => (
-          <Academy key={academy.institution} {...academy} />
-        ))}
-      </div>
-    </section>
-  );
-};
-
-const Academy = ({ career, date, institution }) => {
-  return (
-    <div className="education__content">
-      <div className="education__time">
-        <span className="education__rounder"></span>
-        <span className="education__line"></span>
-      </div>
-      <div className="education__data bd-grid">
-        <h3 className="education__title">{career}</h3>
-        <span className="education__year">{date}</span>
-        <span className="education__studies">{institution}</span>
-      </div>
+export const Academic = ({ academic }) => (
+  <div>
+    <h2 className="section-title">교육</h2>
+    <div className="mt-4 grid gap-4">
+      {academic.map((a) => (
+        <div key={a.career} className="rounded-xl border border-slate-200 p-4">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <div className="font-medium">{a.career}</div>
+            <span className="text-xs text-slate-500">{a.date}</span>
+          </div>
+          <div className="text-sm text-slate-600">{a.institution}</div>
+        </div>
+      ))}
     </div>
-  );
-};
+  </div>
+);

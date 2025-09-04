@@ -1,3 +1,8 @@
+/* ============================
+   2) Schemas/Data.js
+   ============================ */
+
+/** src/Schemas/Data.js **/
 export const Data = {
   profile: {
     name: "이재오",
@@ -9,15 +14,15 @@ export const Data = {
   },
   aboutMe: {
     label: "Profile",
-    description:
-   [ "실무 경력 23년, 교육 경력 6년 을 동시에 겸비한 전문 개발자 및 교육자 ",
-    " 사랑하는 두딸,아내와 소소한 행복을 꿈꾸는 평범한 남편이자 아빠  " ]
+    description: [
+      "실무 경력 23년, 교육 경력 6년 을 동시에 겸비한 전문 개발자 및 교육자",
+      "사랑하는 두딸,아내와 소소한 행복을 꿈꾸는 평범한 남편이자 아빠",
+    ],
   },
   skills: {
     technicalLabel: "Technology",
     softLabel: "Skills",
     technicalSkills: [
-      
       "컴퓨터 비전",
       "영상 신호 처리",
       "임베디드",
@@ -25,7 +30,7 @@ export const Data = {
       "인공지능",
       "IOT",
       "회로설계",
-      "웹개발"
+      "웹개발",
     ],
     softSkills: [
       "React",
@@ -70,7 +75,7 @@ export const Data = {
         period: "Jan,  1995 - May ,2005",
         company: "삼성전자",
         description: [
-          "삼성전자 DMC 연구소에서 개발한 chip을 application engineer의  leader로서 삼성전자 TV에 적용하여 생산성 향상"
+          "삼성전자 DMC 연구소에서 개발한 chip을 application engineer의 leader로서 삼성전자 TV에 적용하여 생산성 향상",
         ],
       },
       {
@@ -79,44 +84,35 @@ export const Data = {
         company: "진양공업주식회사",
         description: [
           "기상청 협력 업체로서 센서데이터를 취합하여 통합 관리",
-          "라디오 존데 개발"
+          "라디오 존데 개발",
         ],
       },
-      
-        {
-          title: "임베디드 시스템 개발",
-          period: "Oct. 2010 - Oct. 2012",
-          company: "네오와인,포스트테크",
-          description: [
-            "암호 chip 활용 시스템 엕지니어",
-            "ARM CPU 를 활용하여  시스템 엔지니어"
-          ],
+      {
+        title: "임베디드 시스템 개발",
+        period: "Oct. 2010 - Oct. 2012",
+        company: "네오와인,포스트테크",
+        description: [
+          "암호 chip 활용 시스템 엕지니어",
+          "ARM CPU 를 활용하여 시스템 엔지니어",
+        ],
       },
-        {
+      {
         title: "신기술 특허 분석 및 특허 전략 보고",
         period: "Oct. 2013 - Oct. 2017",
         company: "미래특허",
         description: [
-          "삼성 종합 기술원 및 삼성전자 신기술 제품 기획 전 특허 관련 특허 분석 및 특허 맵 작성"
+          "삼성 종합 기술원 및 삼성전자 신기술 제품 기획 전 특허 관련 특허 분석 및 특허 맵 작성",
         ],
       },
       {
         title: "레이저 가공 장비 개발",
         period: "Jan. 2017 - Jan. 2018",
         company: "비슬로",
-        description: [
-          "전장 회로 설계및 소트프웨어",
-        
-        ],
-    },
-    
+        description: ["전장 회로 설계및 소트프웨어"],
+      },
     ],
     academic: [
-      {
-        career: "전자통신공학과",
-        date: "1995",
-        institution: "광운대학교",
-      },
+      { career: "전자통신공학과", date: "1995", institution: "광운대학교" },
     ],
     proyects: [
       {
@@ -124,15 +120,15 @@ export const Data = {
         company: "솔데스크",
         period: "May. 2018 - Nov. 2018",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,파이썬,HTML,CSS,딥러닝,머신러닝 강의"
-      ],
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,파이썬,HTML,CSS,딥러닝,머신러닝 강의",
+        ],
       },
       {
         name: "자바 웹프로그래밍 및 정보처리 산업 기사 자격증 취득 과정",
         company: "솔데스크",
         period: "Jun. 2019 - Dec. 2019",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis 강의",
         ],
       },
       {
@@ -140,7 +136,7 @@ export const Data = {
         company: "그린 컴퓨터",
         period: "Dec. 2019 - Dec. 2020",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis ,안드로이드, 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis ,안드로이드, 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의",
         ],
       },
       {
@@ -164,7 +160,7 @@ export const Data = {
         company: "그린 컴퓨터",
         period: "July. 2021 - Dec 2021",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의",
         ],
       },
       {
@@ -172,7 +168,7 @@ export const Data = {
         company: "그린 컴퓨터",
         period: "Dec. 2021 - Jun 2022",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의",
         ],
       },
       {
@@ -180,7 +176,7 @@ export const Data = {
         company: "두드림",
         period: "Jun. 2022 - Dec 2022",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 ,컴퓨터 비전 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 ,컴퓨터 비전 강의",
         ],
       },
       {
@@ -188,7 +184,7 @@ export const Data = {
         company: "수원 이젠",
         period: "Dec. 2022 - Jun 2023",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의",
         ],
       },
       {
@@ -196,7 +192,7 @@ export const Data = {
         company: "천호 국제 아트 아카데미",
         period: "Jun. 2023 - Jan 2024",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 ,머신러닝 ,딥러닝 강의",
         ],
       },
       {
@@ -204,7 +200,7 @@ export const Data = {
         company: "이젠컴퓨터아카데미화곡",
         period: "Jan 2024 -  2024 년 7월 ",
         description: [
-          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 강의"
+          "JAVA ,JSP, 스프링,JAVASCRIPT,JQUERY ,HTML,CSS,SQL, Mybatis , 파이선, 빅데이터 강의",
         ],
       },
       {
@@ -212,7 +208,7 @@ export const Data = {
         company: "미금 그린아카데미 노코드 2기",
         period: "2024년 8월 -  2025 년 1월",
         description: [
-          "JAVA , 스프링,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA , 파이선"
+          "JAVA , 스프링,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA , 파이선",
         ],
       },
       {
@@ -220,15 +216,15 @@ export const Data = {
         company: "미금 그린아카데미 노코드 3기",
         period: "2025년 2월 - 2025년 6월",
         description: [
-          "JAVA , 스프링,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA , 파이선"
+          "JAVA , 스프링,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA , 파이선",
         ],
       },
-       {
+      {
         name: "프로젝트기반 웹&앱(자바,스프링,리액트,노코드) SW개발자 양성과정",
         company: "미금 그린아카데미 노코드 6기",
         period: "2025년 7월 15일 -  2026년 2월 10일(현재 진행중)",
         description: [
-          "JAVA , 스프링부트 ,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA"
+          "JAVA , 스프링부트 ,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA",
         ],
       },
     ],

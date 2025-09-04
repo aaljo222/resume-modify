@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+/** src/Pages/Resume.jsx **/
+import React, { useEffect, useState } from "react";
 import { Profile } from "../Components/Profile";
 import { Academic } from "../Components/Academic";
 import { Skills } from "../Components/Skills";
@@ -7,16 +7,12 @@ import { Proyects } from "../Components/Proyects";
 import { Works } from "../Components/Works";
 import { SocialMedia } from "../Components/SocialMedia";
 import { AboutMe } from "../Components/AboutMe";
-import { Menu } from "../Components/Menu";
 import { SEO } from "../Components/SEO";
-
 import { Data as dataSchema } from "../Schemas/Data";
-import { Menu as menuSchema } from "../Schemas/Menu";
 
 export const Resume = () => {
   const query = "(min-width: 968px)";
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
-
   useEffect(() => {
     const media = window.matchMedia(query);
     const listener = () => setMatches(media.matches);
@@ -28,21 +24,37 @@ export const Resume = () => {
 
   return (
     <>
-      <SEO  {...profile} {...aboutMe} />
-      {!matches && <Menu {...menuSchema} />}
-      <main className="l-main bd-container" id="bd-container">
-        <div className="resume" id="area-cv">
-          <div className="resume__left">
+      <SEO {...profile} {...aboutMe} />
+
+      {/* Hero */}
+      <section id="home" className="relative">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary-50 to-transparent" />
+        <div className="container-max py-10">
+          <div className="grid items-center gap-8 md:grid-cols-[1fr,1.5fr]">
             <Profile {...profile} />
-            <AboutMe {...aboutMe} />
+            <div className="card">
+              <AboutMe {...aboutMe} />
+              <SocialMedia {...socialMedia} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Grid */}
+      <main id="bd-container" className="container-max pb-16">
+        <div id="area-cv" className="grid gap-6 md:grid-cols-2">
+          <section id="skills" className="card">
             <Skills {...skills} />
-            <SocialMedia {...socialMedia} />
-          </div>
-          <div className="resume__right">
+          </section>
+          <section id="experience" className="card">
             <Works {...experience} />
+          </section>
+          <section id="education" className="card md:col-span-1">
             <Academic {...experience} />
+          </section>
+          <section id="proyects" className="card md:col-span-2">
             <Proyects {...experience} />
-          </div>
+          </section>
         </div>
       </main>
     </>

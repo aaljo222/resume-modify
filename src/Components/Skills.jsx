@@ -1,3 +1,4 @@
+/** src/Components/Skills.jsx **/
 import React from "react";
 
 export const Skills = ({
@@ -7,29 +8,25 @@ export const Skills = ({
   softSkills,
 }) => {
   return (
-    <>
-      <section className="technical-skills section" id="skills">
+    <div>
+      <div>
         <h2 className="section-title">{technicalLabel}</h2>
-        <div className="skills__content bd-grid">
-          <ul className="skills__data">
-            {technicalSkills.map((skill) => <Skill key={skill} skill={skill} />)}
-          </ul>
-        </div>
-      </section>
-      <section className="soft-skills section">
+        <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {technicalSkills.map((s) => (
+            <SkillPill key={s} text={s} />
+          ))}
+        </ul>
+      </div>
+      <div className="mt-8">
         <h2 className="section-title">{softLabel}</h2>
-        <div className="skills__content bd-grid">
-          <ul className="skills__data">
-            {softSkills.map((skill) => <Skill key={skill} skill={skill} />)}
-          </ul>
-        </div>
-      </section>
-    </>
+        <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {softSkills.map((s) => (
+            <SkillPill key={s} text={s} />
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 
-const Skill = ({ skill }) => (
-  <li className="skills__name">
-    <span className="skills__circle" /> {skill}
-  </li>
-);
+const SkillPill = ({ text }) => <li className="tag">{text}</li>;

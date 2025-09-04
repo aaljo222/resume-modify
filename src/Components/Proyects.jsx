@@ -1,4 +1,4 @@
-/** src/Components/Proyects.jsx **/
+// src/Components/Proyects.jsx
 import React from "react";
 
 export const Proyects = ({ proyects }) => (
@@ -8,16 +8,22 @@ export const Proyects = ({ proyects }) => (
       {proyects.map((p) => (
         <article
           key={p.name + p.period}
-          className="rounded-2xl border border-slate-200 p-5 hover:shadow-soft"
+          className="rounded-2xl border border-slate-200 p-5 hover:shadow-lg"
         >
-          <header className="flex items-start justify-between gap-4">
-            <div>
-              <h3 className="font-semibold">{p.name}</h3>
-              <div className="text-sm text-slate-600">{p.company}</div>
+          {/* 🔧 헤더 구조 수정 */}
+          <header className="flex items-start gap-4">
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-lg leading-tight break-keep">
+                {p.name}
+              </h3>
+              <div className="text-sm text-slate-600 break-keep">
+                {p.company}
+              </div>
             </div>
-            <span className="tag whitespace-nowrap">{p.period}</span>
+            <span className="tag shrink-0 whitespace-nowrap">{p.period}</span>
           </header>
-          <ul className="mt-3 list-disc ps-5 text-sm text-slate-700">
+
+          <ul className="mt-3 list-disc ps-5 text-sm text-slate-700 break-keep">
             {p.description.map((d, i) => (
               <li key={i}>{d}</li>
             ))}

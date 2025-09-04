@@ -27,7 +27,7 @@ export const Resume = () => {
       <SEO {...profile} {...aboutMe} />
 
       {/* Hero */}
-      <section id="home" className="relative">
+      <section id="home" className="relative scroll-mt-24">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary-50 to-transparent" />
         <div className="container-max py-10">
           <div className="grid items-center gap-8 md:grid-cols-[1fr,1.5fr]">
@@ -43,16 +43,16 @@ export const Resume = () => {
       {/* Main Grid */}
       <main id="bd-container" className="container-max pb-16">
         <div id="area-cv" className="grid gap-6 md:grid-cols-2">
-          <section id="skills" className="card">
+          <section id="skills" className="card scroll-mt-24">
             <Skills {...skills} />
           </section>
-          <section id="experience" className="card">
+          <section id="experience" className="card scroll-mt-24">
             <Works {...experience} />
           </section>
-          <section id="education" className="card md:col-span-1">
+          <section id="education" className="card md:col-span-1 scroll-mt-24">
             <Academic {...experience} />
           </section>
-          <section id="proyects" className="card md:col-span-2">
+          <section id="projects" className="card md:col-span-2 scroll-mt-24">
             <Proyects {...experience} />
           </section>
         </div>

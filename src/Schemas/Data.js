@@ -44,15 +44,15 @@ export const Data = {
     label: "SOCIAL",
     social: [
       {
-        label: "Maaato",
-        name: "linkedin",
-        url: "https://www.linkedin.com/in/matias-alfonso-lagos-gajardo",
+        label: "유투브",
+        name: "유투브",
+        url: "https://www.youtube.com/@jaeohlee5719",
         className: "bxl-linkedin-square",
       },
       {
-        label: "Maaato",
+        label: "페이스북",
         name: "github",
-        url: "https://github.com/Maaato",
+        url: "https://www.facebook.com/jaeoh.lee.77?locale=ko_KR",
         className: "bxl-github",
       },
       {
@@ -82,32 +82,34 @@ export const Data = {
           "라디오 존데 개발"
         ],
       },
-      {
-        title: "신기술 특허 분석 및 특허 전략 보고",
-        period: "Oct. 2005 - Oct. 2010",
-        company: "미래특허",
-        description: [
-          "삼성 종합 기술원 및 삼성전자 신기술 제품 기획 전 특허 관련 특허 분석 및 특허 맵 작성"
-        ],
-      },
+      
         {
           title: "임베디드 시스템 개발",
-          period: "Oct. 2010 - Oct. 2015",
+          period: "Oct. 2010 - Oct. 2012",
           company: "네오와인,포스트테크",
           description: [
             "암호 chip 활용 시스템 엕지니어",
             "ARM CPU 를 활용하여  시스템 엔지니어"
           ],
       },
+        {
+        title: "신기술 특허 분석 및 특허 전략 보고",
+        period: "Oct. 2013 - Oct. 2017",
+        company: "미래특허",
+        description: [
+          "삼성 종합 기술원 및 삼성전자 신기술 제품 기획 전 특허 관련 특허 분석 및 특허 맵 작성"
+        ],
+      },
       {
         title: "레이저 가공 장비 개발",
-        period: "Jan. 2016 - Jan. 2018",
+        period: "Jan. 2017 - Jan. 2018",
         company: "비슬로",
         description: [
           "전장 회로 설계및 소트프웨어",
         
         ],
     },
+    
     ],
     academic: [
       {

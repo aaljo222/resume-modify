@@ -35,9 +35,10 @@ export const Resume = () => {
 
       {/* 메인 2열: 왼쪽 콘텐츠 / 오른쪽 메뉴 */}
       <main className="container-max pb-16">
-        <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_320px]">
-          {/* Left column */}
-          <div className="grid gap-6">
+        {/* ✅ 12컬럼 그리드: 왼쪽 8~9, 오른쪽 4~3 */}
+        <div className="grid grid-cols-12 gap-6">
+          {/* Left column (사진 → Technology → Skills → Profile → Education/Experience/Projects) */}
+          <div className="col-span-12 md:col-span-8 lg:col-span-9">
             {/* 1) 사진(프로필 카드) */}
             <section id="profile" className="card scroll-mt-24">
               <div className="flex flex-col gap-6 md:flex-row">
@@ -49,7 +50,7 @@ export const Resume = () => {
               </div>
             </section>
 
-            {/* 2) Technology (기술 스택 상단 그룹) */}
+            {/* 2) Technology */}
             <section id="technology" className="card scroll-mt-24">
               <h2 className="section-title">Technology</h2>
               <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
@@ -61,7 +62,7 @@ export const Resume = () => {
               </ul>
             </section>
 
-            {/* 3) Skills (소프트 스킬) */}
+            {/* 3) Skills */}
             <section id="skills" className="card scroll-mt-24">
               <Skills
                 technicalLabel="Skills"
@@ -71,7 +72,7 @@ export const Resume = () => {
               />
             </section>
 
-            {/* 4) Profile(세부 정보 더보기: 선택) */}
+            {/* 4) Profile(추가 설명) */}
             <section id="profile-more" className="card scroll-mt-24">
               <h2 className="section-title">Profile</h2>
               <p className="mt-3 text-slate-700">{aboutMe.description[0]}</p>

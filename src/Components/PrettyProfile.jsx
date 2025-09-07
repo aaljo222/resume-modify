@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { Data } from "../Schemas/Data";
+// (framer-motion removed for zero-dependency build)
 
 // ⚠️ Demo-only icons (Boxicons)
 // In a real app, put this <link> in index.html <head>
@@ -10,81 +11,60 @@ const Boxicons = () => (
 );
 
 // -----------------------------
-// Demo data (replace with your real data)
+// Data binding
 // -----------------------------
-const profile = {
-  name: "Jaeoh Lee",
-  occupation: "Embedded / AIoT Engineer · Instructor",
-  location: "Suwon, KR",
-  email: "jaeoh@example.com",
-  phone: "+82-10-0000-0000",
-  image:
-    "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=400&auto=format&fit=crop", // replace
+// Use external data file to populate the UI
+const resolvePublic = (p) => {
+  if (!p) return "";
+  // If it's an absolute url, keep it. Else read from /public
+  if (/^https?:\/\//i.test(p)) return p;
+  const cleaned = p.replace(/^\/+/, "");
+  return `${process.env.PUBLIC_URL}/${cleaned}`;
 };
 
-const social = [
-  { name: "GitHub", url: "https://github.com/", icon: "bxl-github" },
-  { name: "LinkedIn", url: "https://linkedin.com/", icon: "bxl-linkedin" },
-  { name: "YouTube", url: "https://youtube.com/", icon: "bxl-youtube" },
-  { name: "Blog", url: "https://yourblog.com/", icon: "bx-world" },
-];
+const profile = {
+  name: Data.profile?.name || "",
+  occupation: Data.profile?.ocupation || Data.profile?.occupation || "",
+  location: Data.profile?.location || "",
+  email: Data.profile?.email || "",
+  phone: Data.profile?.telephone || "",
+  image: resolvePublic(Data.profile?.image),
+};
+
+const social = (Data.socialMedia?.social || []).map((s) => ({
+  name: s.label || s.name,
+  url: s.url,
+  icon: s.className || "bx-link",
+}));
 
 const skills = {
-  tech: [
-    "C/C++ (STM32)",
-    "FreeRTOS",
-    "ESP32/LoRa/Zigbee",
-    "Python",
-    "Kafka/Spark",
-    "MongoDB/MySQL",
-    "Spring Boot",
-    "React/Redux",
-    "Docker/K8s",
-    "TinyML/Edge AI",
-  ],
-  soft: ["Curriculum Design", "Mentoring", "Public Speaking", "PM", "Agile"],
+  tech: Data.skills?.technicalSkills || [],
+  soft: Data.skills?.softSkills || [],
 };
 
-const education = [
-  { title: "M.S. (Control/AI)", org: "Some University", date: "2017" },
-  { title: "B.S. (EE)", org: "Some University", date: "2015" },
-];
+const education = (Data.experience?.academic || []).map((a) => ({
+  title: a.career,
+  org: a.institution,
+  date: a.date,
+}));
 
-const works = [
-  {
-    title: "IoT + AI Streaming Platform",
-    company: "Breed B International",
-    date: "2024–2025",
-    bullets: [
-      "Kafka → Spark Structured Streaming → MongoDB pipeline",
-      "Edge ESP32+Sensor kit, React dashboard, Slack alerts",
-    ],
-  },
-  {
-    title: "Smart Factory PoC (PdM)",
-    company: "Teracode Intelligence",
-    date: "2023–2024",
-    bullets: [
-      "Vibration/Current sensing → anomaly → PLC alarm",
-      "TinyML on STM32/ESP32, Modbus/RS-485 integration",
-    ],
-  },
-];
+const works = (Data.experience?.works || []).map((w) => ({
+  title: w.title,
+  company: w.company,
+  date: w.period,
+  bullets: w.description || [],
+}));
 
-const projects = [
-  {
-    name: "AIoT Fan Control Kit",
-    org: "Arduino Nano 33 IoT",
-    date: "2024",
-    bullets: ["React MQTT dashboard (charts)", "Wi‑Fi control + IMU events"],
-  },
-  {
-    name: "Resume Analyzer (AI)",
-    org: "Streamlit + OpenAI API",
-    date: "2023",
-    bullets: ["LLM-enabled PDF parsing", "Score & feedback export"],
-  },
-];
+const projects = (
+  Data.experience?.proyects ||
+  Data.experience?.projects ||
+  []
+).map((p) => ({
+  name: p.name,
+  org: p.company,
+  date: p.period,
+  bullets: p.description || [],
+}));
 
 // -----------------------------
 // Small helpers
@@ -132,7 +112,7 @@ export default function PrettyProfile() {
         <Container>
           <nav className="flex h-14 items-center justify-between">
             <a href="#home" className="text-base font-semibold tracking-tight">
-              Jaeoh Lee
+              {profile.name}
             </a>
             <ul className="hidden md:flex items-center gap-2 text-sm">
               {[
@@ -169,10 +149,7 @@ export default function PrettyProfile() {
           <div className="py-10 sm:py-14">
             <Card className="p-6">
               <div className="flex flex-col items-center gap-6 sm:flex-row">
-                <motion.img
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
+                <img
                   src={profile.image}
                   alt={profile.name}
                   className="h-28 w-28 rounded-full object-cover ring-4 ring-white/80 shadow-lg"
@@ -257,18 +234,9 @@ export default function PrettyProfile() {
             <Section id="about" title="About Me">
               <Card className="p-5">
                 <ul className="grid gap-2 text-slate-700 dark:text-slate-300 leading-relaxed">
-                  <li>
-                    Embedded + AIoT 엔지니어이자 훈련교사로, 엣지‑AI와 산업용
-                    IoT를 연결합니다.
-                  </li>
-                  <li>
-                    Kafka/Spark 스트리밍, ESP32/STM32, React 대시보드까지 E2E를
-                    즐깁니다.
-                  </li>
-                  <li>
-                    교육 커리큘럼 설계와 실습 키트 제작으로 학습 곡선을 확
-                    낮춥니다.
-                  </li>
+                  {(Data.aboutMe?.description || []).map((line, idx) => (
+                    <li key={idx}>{line}</li>
+                  ))}
                 </ul>
               </Card>
             </Section>
@@ -379,7 +347,7 @@ export default function PrettyProfile() {
             </Section>
 
             <footer className="pb-12 text-sm text-slate-500">
-              © {new Date().getFullYear()} Jaeoh Lee. All rights reserved.
+              © {new Date().getFullYear()} {profile.name}. All rights reserved.
             </footer>
           </main>
         </div>

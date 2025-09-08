@@ -1,7 +1,3 @@
-/* ============================
-   2) Schemas/Data.js
-   ============================ */
-
 /** src/Schemas/Data.js **/
 export const Data = {
   profile: {

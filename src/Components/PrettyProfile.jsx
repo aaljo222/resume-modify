@@ -13,11 +13,9 @@ const Boxicons = () => (
 // -----------------------------
 // Data binding
 // -----------------------------
-// Use external data file to populate the UI
 const resolvePublic = (p) => {
   if (!p) return "";
-  // If it's an absolute url, keep it. Else read from /public
-  if (/^https?:\/\//i.test(p)) return p;
+  if (/^https?:\/\//i.test(p)) return p; // absolute url
   const cleaned = p.replace(/^\/+/, "");
   return `${process.env.PUBLIC_URL}/${cleaned}`;
 };
@@ -67,11 +65,11 @@ const projects = (
 }));
 
 // -----------------------------
-// Small helpers
+// Small helpers (tweaked sizes)
 // -----------------------------
 const Section = ({ id, title, children }) => (
   <section id={id} className="scroll-mt-28">
-    <h2 className="text-xl font-semibold tracking-tight text-slate-800 dark:text-slate-100">
+    <h2 className="text-2xl font-semibold tracking-tight text-slate-800 dark:text-slate-100">
       {title}
     </h2>
     <div className="mt-4">{children}</div>
@@ -81,7 +79,7 @@ const Section = ({ id, title, children }) => (
 const Card = ({ children, className = "" }) => (
   <div
     className={
-      "rounded-2xl border border-slate-200/70 bg-white/70 dark:bg-slate-900/60 backdrop-blur shadow-[0_8px_30px_rgba(0,0,0,0.06)] " +
+      "rounded-2xl border border-slate-200/70 bg-white/80 dark:bg-slate-900/60 backdrop-blur shadow-[0_8px_30px_rgba(0,0,0,0.06)] " +
       className
     }
   >
@@ -89,14 +87,10 @@ const Card = ({ children, className = "" }) => (
   </div>
 );
 
-const Tag = ({ children }) => (
-  <span className="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2.5 py-1 text-xs font-medium">
-    {children}
-  </span>
-);
-
 const Container = ({ children }) => (
-  <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">{children}</div>
+  <div className="mx-auto max-w-7xl 2xl:max-w-[1400px] px-4 sm:px-8 lg:px-10">
+    {children}
+  </div>
 );
 
 // -----------------------------
@@ -104,13 +98,13 @@ const Container = ({ children }) => (
 // -----------------------------
 export default function PrettyProfile() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-200">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-200 text-[17px] md:text-[18px]">
       <Boxicons />
 
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/70 dark:bg-slate-950/50 backdrop-blur supports-[backdrop-filter]:bg-white/40">
         <Container>
-          <nav className="flex h-14 items-center justify-between">
+          <nav className="flex h-16 items-center justify-between">
             <a href="#home" className="text-base font-semibold tracking-tight">
               {profile.name}
             </a>
@@ -152,10 +146,10 @@ export default function PrettyProfile() {
                 <img
                   src={profile.image}
                   alt={profile.name}
-                  className="h-28 w-28 rounded-full object-cover ring-4 ring-white/80 shadow-lg"
+                  className="h-36 w-36 rounded-full object-cover ring-4 ring-white/80 shadow-lg"
                 />
                 <div className="flex-1 min-w-0">
-                  <h1 className="text-2xl font-semibold tracking-tight">
+                  <h1 className="text-3xl font-semibold tracking-tight">
                     {profile.name}
                   </h1>
                   <p className="mt-1 text-slate-600 dark:text-slate-400">
@@ -203,7 +197,7 @@ export default function PrettyProfile() {
       <Container>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
           {/* Sidebar */}
-          <aside className="lg:col-span-4">
+          <aside className="lg:col-span-3">
             <Card className="p-5 sticky top-28">
               <div className="text-sm font-medium text-slate-500">
                 Quick Links
@@ -230,7 +224,7 @@ export default function PrettyProfile() {
           </aside>
 
           {/* Main content */}
-          <main className="lg:col-span-8 space-y-12">
+          <main className="lg:col-span-9 space-y-12">
             <Section id="about" title="About Me">
               <Card className="p-5">
                 <ul className="grid gap-2 text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -289,7 +283,7 @@ export default function PrettyProfile() {
             </Section>
 
             <Section id="projects" title="Projects / Teaching">
-              <div className="grid gap-4 xl:grid-cols-2">
+              <div className="grid gap-5 lg:grid-cols-1 xl:grid-cols-2">
                 {projects.map((p) => (
                   <Card key={p.name + p.date} className="p-5">
                     <div className="flex flex-wrap items-baseline justify-between gap-2">

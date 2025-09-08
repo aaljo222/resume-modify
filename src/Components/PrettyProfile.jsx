@@ -67,6 +67,16 @@ const projects = (
 // -----------------------------
 // Small helpers (tweaked sizes)
 // -----------------------------
+// helpers 위쪽 또는 그 자리에 추가
+const Tag = ({ children }) => (
+  <span
+    className="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-800
+                   text-slate-700 dark:text-slate-300 px-2.5 py-1 text-xs font-medium"
+  >
+    {children}
+  </span>
+);
+
 const Section = ({ id, title, children }) => (
   <section id={id} className="scroll-mt-28">
     <h2 className="text-2xl font-semibold tracking-tight text-slate-800 dark:text-slate-100">

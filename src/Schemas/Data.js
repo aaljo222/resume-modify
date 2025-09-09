@@ -2,7 +2,7 @@
 export const Data = {
   profile: {
     name: "이재오",
-    ocupation: "인공지능 , 빅데이터 전문가",
+    ocupation: "AI · 빅데이터 · 임베디드 전문가 / 교육자",
     location: "수원시 영통구 영통동 삼성로 320번길 62",
     email: "aaljo2@naver.com",
     telephone: "010-7547-xxxx",
@@ -11,9 +11,10 @@ export const Data = {
   aboutMe: {
     label: "Profile",
     description: [
-      "현업 23년, 교육 7년—AI·임베디드·빅데이터를 잇는 실전형 개발자이자 교육자입니다.",
-      "두 딸과 아내와의 일상에서 얻은 배려와 책임을 수업과 프로젝트에 녹입니다.",
-      "수학·인공지능,빅데이터,소프트웨어·하드웨어 교육을 중심으로 ‘콘텐츠·교재·키트’ IP 포트폴리오를 구축해, 은퇴 이후에도 지속 가능한 수익 구조를 준비합니다.",
+      "현업 23년, 교육 7년의 경력을 지닌 실전형 개발자이자 교육자"
+      "AI, 임베디드, 빅데이터, 소프트웨어·하드웨어 융합 분야 전문성 보유"
+      "가족과의 일상에서 얻은 배려와 책임을 바탕으로 교육과 프로젝트에 녹여냄'
+      ‘콘텐츠·교재·키트’ IP 포트폴리오를 구축하여 지속 가능한 수익 구조 설계",
     ],
   },
   skills: {
@@ -72,7 +73,7 @@ export const Data = {
         period: "Jan,  1995 - May ,2005",
         company: "삼성전자",
         description: [
-          "삼성전자 DMC 연구소에서 개발한 chip을 application engineer의 leader로서 삼성전자 TV에 적용하여 생산성 향상",
+          "TV 화질 개선 및 영상 신호 처리 – Application Engineer 리더",
         ],
       },
       {
@@ -80,8 +81,7 @@ export const Data = {
         period: "Oct. 2005 - Oct. 2010",
         company: "진양공업주식회사",
         description: [
-          "기상청 협력 업체로서 센서데이터를 취합하여 통합 관리",
-          "라디오 존데 개발",
+          "기상청 관측 장비 및 센서 데이터 통합 관리 시스템 개발",
         ],
       },
       {
@@ -89,8 +89,7 @@ export const Data = {
         period: "Oct. 2010 - Oct. 2012",
         company: "네오와인,포스트테크",
         description: [
-          "암호 chip 활용 시스템 엕지니어",
-          "ARM CPU 를 활용하여 시스템 엔지니어",
+          "라디오존데, 암호칩 기반 임베디드 시스템 개발",
         ],
       },
       {
@@ -98,14 +97,14 @@ export const Data = {
         period: "Oct. 2013 - Oct. 2017",
         company: "미래특허",
         description: [
-          "삼성 종합 기술원 및 삼성전자 신기술 제품 기획 전 특허 관련 특허 분석 및 특허 맵 작성",
+          "삼성전자·종기원 신기술 특허 분석 및 전략 보고",
         ],
       },
       {
         title: "레이저 가공 장비 개발",
         period: "Jan. 2017 - Jan. 2018",
         company: "비슬로",
-        description: ["전장 회로 설계및 소트프웨어"],
+        description: ["레이저 가공 장비 개발 (전장 회로 설계 + SW)"],
       },
     ],
     academic: [

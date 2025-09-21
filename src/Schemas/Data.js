@@ -166,17 +166,14 @@ export const Data = {
         company: "미금 그린컴퓨터",
         period: "2021-02-01 ~ 2021-07-13 (6개월)",
         description: [
-          "JAVA, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis",
-          "평점 4.7",
-        ],
+          "JAVA, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis"
       },
       {
         name: "공공데이터 융합 JAVA & 파이썬 웹개발자 양성",
         company: "미금 그린컴퓨터",
         period: "2021-07-19 ~ 2021-12-31 (6개월)",
         description: [
-          "JAVA, 파이썬, 웹개발, 공공데이터",
-          "평점 4.5",
+          "JAVA, 파이썬, 웹개발, 공공데이터"
         ],
       },
       {
@@ -184,8 +181,7 @@ export const Data = {
         company: "미금 그린컴퓨터",
         period: "2021-12-28 ~ 2022-06-17 (6개월)",
         description: [
-          "JAVA, JSP, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis, 파이썬, 빅데이터, 머신러닝, 딥러닝",
-          "평점 5.0",
+          "JAVA, JSP, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis, 파이썬, 빅데이터, 머신러닝, 딥러닝"
         ],
       },
       // ——— 2022 ———
@@ -194,8 +190,7 @@ export const Data = {
         company: "용인 기흥 두드림",
         period: "2022-07-08 ~ 2022-12-16 (6개월)",
         description: [
-          "컴퓨터비전 포함 풀스택 AI",
-          "평점 4.1",
+          "컴퓨터비전 포함 풀스택 AI"
         ],
       },
       // ——— 2022~2023 ———
@@ -204,8 +199,7 @@ export const Data = {
         company: "수원 이젠",
         period: "2022-12-30 ~ 2023-06-21 (6개월)",
         description: [
-          "JAVA, 파이썬, 빅데이터, 풀스택",
-          "평점 4.2",
+          "JAVA, 파이썬, 빅데이터, 풀스택"
         ],
       },
       // ——— 2023~2024 ———
@@ -213,22 +207,21 @@ export const Data = {
         name: "기업 프로젝트 기반 백엔드 개발자 양성",
         company: "서울 천호",
         period: "2023-07-03 ~ 2024-01-02 (6개월)",
-        description: ["빅데이터 활용 백엔드", "평점 4.5"],
+        description: ["Java, Spring, React, HTML/CSS/JS, SQL,파이썬],
       },
       // ——— 2024 ———
       {
         name: "ITS(지능형교통체계) 빅데이터 활용 풀스택 전문가",
         company: "서울 화곡",
         period: "2024-01-25 ~ 2024-07-18 (6개월)",
-        description: ["풀스택/빅데이터", "평점 4.7 · 교강사 4.9"],
+        description: ["컴퓨터 비전 인공지능 개발"],
       },
       {
         name: "프로젝트기반 웹&앱 SW개발자 양성과정 (노코드 2기)",
         company: "미금 그린아카데미",
         period: "2024-07-24 ~ 2025-01-21 (6개월)",
         description: [
-          "Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA",
-          "평점 4.6 · 교강사 4.7",
+          "Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA"
         ],
       },
       {
@@ -236,8 +229,7 @@ export const Data = {
         company: "미금 그린아카데미",
         period: "2025-02-21 ~ 2025-06-10",
         description: [
-           "Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA",
-          "평점 4.9 · 교강사 4.9",
+           "Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA"
         ],
       },
     {

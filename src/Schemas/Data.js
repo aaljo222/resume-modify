@@ -1,4 +1,4 @@
-
+// src/Schemas/Data.js
 export const Data = {
   profile: {
     name: "이재오",
@@ -8,6 +8,7 @@ export const Data = {
     telephone: "010-7547-xxxx",
     image: "images/아내.PNG",
   },
+
   aboutMe: {
     label: "Profile",
     description: [
@@ -17,6 +18,7 @@ export const Data = {
       "'콘텐츠·교재·키트' IP 포트폴리오를 구축하여 지속 가능한 수익 구조 설계",
     ],
   },
+
   skills: {
     technicalLabel: "Technology",
     softLabel: "Skills",
@@ -43,6 +45,7 @@ export const Data = {
       "C++",
     ],
   },
+
   socialMedia: {
     label: "SOCIAL",
     social: [
@@ -66,15 +69,14 @@ export const Data = {
       },
     ],
   },
+
   experience: {
     works: [
       {
         title: "삼성전자 — TV 화질 개선 및 영상 신호처리 (Application Engineer 리더)",
         period: "1995-01-10 ~ 2005-06-15",
         company: "삼성전자",
-        description: [
-          "TV 화질 개선 및 영상 신호 처리 – Application Engineer 리더",
-        ],
+        description: ["TV 화질 개선 및 영상 신호 처리 – Application Engineer 리더"],
       },
       {
         title: "경기 중소기업 지원센터 — ITSoC 설계 기초 과정 수료",
@@ -93,31 +95,28 @@ export const Data = {
       },
       {
         title: "네오와인·포스트테크 — 임베디드 시스템 개발",
-        period: "2008-5 ~ 2010-10",
+        period: "2008-05 ~ 2010-10",
         company: "네오와인, 포스트테크",
-        description: [
-          "라디오존데, 암호칩 기반 임베디드 시스템 개발 ",
-        ],
+        description: ["라디오존데, 암호칩 기반 임베디드 시스템 개발"],
       },
       {
         title: "미래 특허기술 — 선행기술 조사/특허 분석",
-        period: "2011-1-2~ 2015-10-31",
+        period: "2011-01-02 ~ 2015-10-31",
         company: "미래특허",
-        description: [
-          "삼성전자·삼성 종합기술원 신기술 특허 분석 및 전략 보고",
-        ],
+        description: ["삼성전자·삼성 종합기술원 신기술 특허 분석 및 전략 보고"],
       },
       {
         title: "비슬로 — 제어 팀장 / 레이저 가공 장비 개발",
         period: "2015-11-01 ~ 2017-08-22",
         company: "비슬로",
-        description: ["레이저 가공 장비 개발 (전장 회로 설계 + SW)"]
+        description: ["레이저 가공 장비 개발 (전장 회로 설계 + SW)"],
       },
-      
     ],
+
     academic: [
       { career: "전자통신공학과", date: "1995", institution: "광운대학교" },
     ],
+
     proyects: [
       // ——— 2018 ———
       {
@@ -134,14 +133,13 @@ export const Data = {
         period: "2018-12-31 ~ 2019-03-04",
         description: ["딥러닝 실무 강의"],
       },
+
       // ——— 2019 ———
       {
         name: "자바 웹프로그래밍 · 정보처리 산업기사 과정",
         company: "종로 솔데스크",
         period: "2019-06-06 ~ 2019-12-28 (6개월)",
-        description: [
-          "JAVA, JSP, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis",
-        ],
+        description: ["JAVA, JSP, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis"],
       },
       {
         name: "웹+빅데이터+안드로이드",
@@ -151,64 +149,61 @@ export const Data = {
           "JAVA, JSP, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis, 안드로이드, 파이썬, 빅데이터, 머신러닝, 딥러닝",
         ],
       },
+
       // ——— 2020 ———
       {
         name: "자바 & 스프링 웹프로그래밍",
         company: "미금 그린컴퓨터",
         period: "2020-07-17 ~ 2021-01-29 (6개월)",
-        description: [
-          "JAVA, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis",
-        ],
+        description: ["JAVA, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis"],
       },
+
       // ——— 2021 ———
       {
         name: "JAVA & Spring 프레임워크 개발자 취업과정",
         company: "미금 그린컴퓨터",
         period: "2021-02-01 ~ 2021-07-13 (6개월)",
-        description: [
-          "JAVA, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis"
+        description: ["JAVA, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis"],
       },
       {
         name: "공공데이터 융합 JAVA & 파이썬 웹개발자 양성",
         company: "미금 그린컴퓨터",
         period: "2021-07-19 ~ 2021-12-31 (6개월)",
-        description: [
-          "JAVA, 파이썬, 웹개발, 공공데이터"
-        ],
+        description: ["JAVA, 파이썬, 웹개발, 공공데이터"],
       },
       {
         name: "파이썬 & 자바 백엔드 개발자",
         company: "미금 그린컴퓨터",
         period: "2021-12-28 ~ 2022-06-17 (6개월)",
         description: [
-          "JAVA, JSP, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis, 파이썬, 빅데이터, 머신러닝, 딥러닝"
+          "JAVA, JSP, 스프링, JAVASCRIPT, JQUERY, HTML, CSS, SQL, MyBatis, 파이썬, 빅데이터, 머신러닝, 딥러닝",
         ],
       },
+
       // ——— 2022 ———
       {
         name: "K-디지털 (영상 지능 AI 전문가 양성)",
         company: "용인 기흥 두드림",
         period: "2022-07-08 ~ 2022-12-16 (6개월)",
-        description: [
-          "컴퓨터비전 포함 풀스택 AI"
-        ],
+        description: ["컴퓨터비전 포함 풀스택 AI"],
       },
+
       // ——— 2022~2023 ———
       {
         name: "기업요구사항 반영 자바&파이썬 빅데이터 풀스택",
         company: "수원 이젠",
         period: "2022-12-30 ~ 2023-06-21 (6개월)",
-        description: [
-          "JAVA, 파이썬, 빅데이터, 풀스택"
-        ],
+        description: ["JAVA, 파이썬, 빅데이터, 풀스택"],
       },
+
       // ——— 2023~2024 ———
       {
         name: "기업 프로젝트 기반 백엔드 개발자 양성",
         company: "서울 천호",
         period: "2023-07-03 ~ 2024-01-02 (6개월)",
-        description: ["Java, Spring, React, HTML/CSS/JS, SQL,파이썬],
+        description: ["Java, Spring, React, HTML/CSS/JS, SQL, 파이썬"],
       },
+
       // ——— 2024 ———
       {
         name: "ITS(지능형교통체계) 빅데이터 활용 풀스택 전문가",
@@ -220,27 +215,22 @@ export const Data = {
         name: "프로젝트기반 웹&앱 SW개발자 양성과정 (노코드 2기)",
         company: "미금 그린아카데미",
         period: "2024-07-24 ~ 2025-01-21 (6개월)",
-        description: [
-          "Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA"
-        ],
+        description: ["Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA"],
       },
+
+      // ——— 2025 ———
       {
         name: "프로젝트기반 웹&앱 SW개발자 양성과정 (노코드 3기)",
         company: "미금 그린아카데미",
         period: "2025-02-21 ~ 2025-06-10",
-        description: [
-           "Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA"
-        ],
+        description: ["Java, Spring, React, No-code, HTML/CSS/JS, SQL, JPA"],
       },
-    {
+      {
         name: "프로젝트기반 웹&앱(자바,스프링,리액트,노코드) SW개발자 양성과정",
         company: "미금 그린아카데미 노코드 6기",
-        period: "2025년 7월 15일 -  2026년 2월 10일(현재 진행중)",
-        description: [
-          "JAVA , 스프링부트 ,JAVASCRIPT,리액트 ,HTML,CSS,SQL, JPA",
-        ],
+        period: "2025-07-15 ~ 2026-02-10 (현재 진행중)",
+        description: ["JAVA, 스프링부트, JAVASCRIPT, 리액트, HTML, CSS, SQL, JPA"],
       },
     ],
   },
-
 };
